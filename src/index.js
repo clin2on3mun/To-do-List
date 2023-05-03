@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 
 const listOfActivity = document.querySelector('ul');
