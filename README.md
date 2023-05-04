@@ -83,7 +83,7 @@ After you're finished please remove all the comments and instructions!
 
 
 - **[Display list of activity on UI]**
-- **[using javascript Store list and remove list in LocalStorage]**
+- **[using javascript CRUD method to create, read,  update and delete acitivities in to do list]**
 - **[using webpack bundle files of project]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
