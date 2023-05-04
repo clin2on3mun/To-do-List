@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,23 +10,23 @@ body {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .container {
   width: 60%;
+  box-sizing: border-box;
   background-color: white;
-  margin: 10% auto;
   display: flex;
   flex-direction: column;
+  padding: 3% 3%;
+  margin: 5% auto;
 }
 
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0% 2% 0% 2%;
+  padding: 5% 2% 5% 2%;
 }
 
 .title {
@@ -43,10 +45,10 @@ form {
 #activity {
   font-style: italic;
   height: 50px;
-  width: 86%;
   border: none;
   padding-left: 2%;
   outline: none;
+  width: 90%;
 }
 
 .add {
@@ -57,11 +59,21 @@ form {
 
 li {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
   height: 50px;
   border-bottom: 1px solid #dbdbdd;
   border-top: 1px solid #dbdbdd;
+}
+
+.tasks {
+  font-family: cursive;
+  font-size: 1.2em;
+}
+
+#edit {
+  outline: none;
+  border: none;
 }
 
 .clear {
@@ -70,4 +82,29 @@ li {
   background-color: #f7f6fa;
   font-size: 1em;
   color: #666667;
+}
+
+li button {
+  padding: 1%;
+  font-size: 1em;
+  font-family: cursive;
+  border: none;
+  border-radius: 10%;
+  color: rgb(251, 247, 247);
+}
+
+button.edit {
+  background-color: #07c107;
+}
+
+button.save-btn {
+  background-color: #092ae3;
+}
+
+button.delete-btn {
+  background-color: #e30909;
+}
+
+li button:active {
+  background: black;
 }
