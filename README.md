@@ -95,7 +95,7 @@ After you're finished please remove all the comments and instructions!
 
 
 
-- [Live Demo Link](coming soon ....)
+- [Live Demo Link]( https://clin2on3mun.github.io/To-do-List/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
