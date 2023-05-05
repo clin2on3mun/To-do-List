@@ -1,5 +1,7 @@
+/* eslint-disable */
 import { removeTask } from './addAndRemove.js';
 import { editItem, saveItem } from './EditAndSave.js';
+import { complete } from './checkAndClear.js';
 
 const activityToDo = document.getElementById('activity-to-do');
 
@@ -13,14 +15,16 @@ export const display = () => {
     activity.forEach((item, indexNo) => {
       item.index = indexNo;
       const list = document.createElement('li');
-      list.id = indexNo;
+      // list.id = indexNo;
       list.className = 'task';
+
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
-      checkbox.id = 'checked';
+      checkbox.onchange = () => complete(item.index);
+      checkbox.id = indexNo;
 
       const description = document.createElement('span');
-      description.className = 'tasks';
+      description.className = `tasks_${indexNo}`;
       description.textContent = item.description;
 
       const saveBtn = document.createElement('button');
@@ -61,6 +65,15 @@ export const display = () => {
       list.appendChild(edit);
       list.appendChild(deleteBtn);
       activityToDo.appendChild(list);
+
+      const text = document.querySelector(`.tasks_${indexNo}`);
+      if (item.completed) {
+        const targetCheckbox = document.getElementById(indexNo.toString());
+        targetCheckbox.checked = true;
+        text.classList.add('complete');
+      } else {
+        text.classList.remove('complete');
+      }
     });
     localStorage.setItem('toDoList', JSON.stringify(activity));
   }
