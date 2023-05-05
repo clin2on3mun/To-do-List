@@ -108,3 +108,7 @@ button.delete-btn {
 li button:active {
   background: black;
 }
+
+.complete {
+  text-decoration: line-through;
+}
