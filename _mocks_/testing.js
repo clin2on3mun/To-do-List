@@ -1,14 +1,4 @@
-const activity = [];
-
-const addTask = (task) => {
-  activity.push(task);
-  return activity;
-};
-
-const removeTask = (index) => {
-  activity.splice(index, 1);
-  return activity;
-};
+const activity = [{task:"go to mall",index:1,completed:false},{task:"go to gym",index:2,completed:false},{task:"eat lunch",index:3,completed:false}];
 
 const editTask = (task) => {
   const editSpace = document.createElement('input');
@@ -20,20 +10,27 @@ const editTask = (task) => {
   return editSpace;
 }
 
-export const complete = (index) => {
-  
-  activity.forEach((item) => {
-    if (item.index === index) {
-      if (item.completed === false) {
-        item.completed = true;
-      } else {
-        item.completed = false;
-      }
-    }
-  });
+const complete = (index) => {
+  // let status=false;
+  // activity.forEach((item) => {
+  //   status = item.completed;
+  //   if (item.index === index) {
+  //     if (!status) {
+  //       status = true;
+  //     }
+  //   }
+  // });
 
+  const status = activity.find((item)=>item.index===index);
+  status.completed = true;
+  return status;
 };
 
-exports.addTask = addTask;
-exports.removeTask = removeTask;
+const clearAll=()=>{
+  const activities = activity.filter((item) => item.completed === false);
+  return activities;
+}
+
 exports.editTask = editTask;
+exports.complete = complete;
+exports.clearAll = clearAll;
