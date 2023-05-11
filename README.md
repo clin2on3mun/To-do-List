@@ -120,8 +120,8 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-  cd my-folder
-  git clone git@github.git@github.com:clin2on3mun/To-do-List.git
+  `cd my-folder`
+  `git clone git@github.git@github.com:clin2on3mun/To-do-List.git`
 
 
 ### Install
@@ -158,6 +158,12 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://twitter.com/ClintonMunana)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/munana-clinton-b6122720b/)
 
+
+👤 **Junaid Ahmed**
+
+- GitHub: [@githubhandle](https://github.com/iamsjunaid)
+- Twitter: [@twitterhandle](https://twitter.com/junaidahmedsd)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/junaid-syed-058b2779/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
