@@ -13,7 +13,7 @@ export const display = () => {
     activityToDo.innerHTML = '';
     activity = get;
     activity.forEach((item, indexNo) => {
-      item.index = indexNo;
+      item.index = indexNo+1;
       const list = document.createElement('li');
       // list.id = indexNo;
       list.className = 'task';
@@ -21,10 +21,10 @@ export const display = () => {
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.onchange = () => complete(item.index);
-      checkbox.id = indexNo;
+      checkbox.id = item.index;
 
       const description = document.createElement('span');
-      description.className = `tasks_${indexNo}`;
+      description.className = `tasks_${item.index}`;
       description.textContent = item.description;
 
       const saveBtn = document.createElement('button');
@@ -66,9 +66,9 @@ export const display = () => {
       list.appendChild(deleteBtn);
       activityToDo.appendChild(list);
 
-      const text = document.querySelector(`.tasks_${indexNo}`);
+      const text = document.querySelector(`.tasks_${item.index}`);
       if (item.completed) {
-        const targetCheckbox = document.getElementById(indexNo.toString());
+        const targetCheckbox = document.getElementById(item.index.toString());
         targetCheckbox.checked = true;
         text.classList.add('complete');
       } else {
