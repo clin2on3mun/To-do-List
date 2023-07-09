@@ -10,11 +10,13 @@ window.addEventListener('DOMContentLoaded', () => {
   addButton.addEventListener('click', (e) => {
     e.preventDefault();
     const activityValue = document.getElementById('activity').value;
-    const description = activityValue;
-    addTask(description);
-    document.getElementById('activity').value = '';
-    complete();
-    display();
+    if (activityValue.trim() !== '') {
+      const description = activityValue;
+      addTask(description);
+      document.getElementById('activity').value = '';
+      complete();
+      display();
+    }
   });
   const clearBtn = document.querySelector('.clear');
   clearBtn.addEventListener('click', clear);
